@@ -227,8 +227,8 @@ impl SessionClient {
                 message::Message::PingRes(mut r) => {
                     if self.state != SessionState::Ready {
                         self.state = SessionState::Ready;
-                        println!(
-                            "ping response in {} ms",
+                        info!(
+                            "initial ping response in {} ms",
                             message::get_millis() - r.origin_time
                         );
                     }

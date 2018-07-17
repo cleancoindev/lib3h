@@ -127,6 +127,7 @@ impl StdNetNode {
             .push(Event::OnServerEvent(ServerEvent::OnListening(
                 endpoint.clone(),
             )));
+        info!("listening on: {}:{}", endpoint.addr, endpoint.port);
     }
 
     pub fn connect(&mut self, endpoint: &Endpoint) {

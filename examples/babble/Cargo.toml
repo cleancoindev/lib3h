@@ -4,4 +4,6 @@ version = "0.1.0"
 authors = ["neonphog <neonphog@gmail.com>"]
 
 [dependencies]
+env_logger = "0.5"
 lib3h = { path = "../../lib3h" }
+log = "0.4"

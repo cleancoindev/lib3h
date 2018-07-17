@@ -1,4 +1,6 @@
+extern crate env_logger;
 extern crate lib3h;
+extern crate log;
 
 use std::time::Instant;
 
@@ -15,6 +17,8 @@ fn node_info(nodes: &mut Vec<Node>, index: usize) -> (&mut Vec<Node>, Vec<u8>, S
 }
 
 fn main() {
+    env_logger::init();
+
     let mut nodes: Vec<Node> = Vec::new();
 
     let test_sequence: Vec<Box<Fn(&mut Vec<Node>)>> = vec![

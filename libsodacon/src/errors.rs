@@ -17,6 +17,7 @@ error_chain! {
         Io(::std::io::Error);
         AddrParseError(::std::net::AddrParseError);
         FromHexError(hex::FromHexError);
+        ParseIntError(::std::num::ParseIntError);
     }
 
     errors {
